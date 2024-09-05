@@ -41,6 +41,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol {
 
 img {
     display: block;
+    max-width: 100%;
 }
 
 .container {
@@ -122,6 +123,7 @@ img {
     font-size: 36px;
     line-height: 1.11;
     letter-spacing: 0.02em;
+    margin-bottom: 72px;
 }
 
 .hero-section {
@@ -147,24 +149,63 @@ img {
     background-color: var(--cloud);
 }
 
-.features-list .title,
-.team-list .title,
-.portfolio-list .title {
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.list .item {
+    width: calc((100% - 72px) / 4);
+}
+
+.portfolio-list .item {
+    width: calc((100% - 48px) / 3);
+}
+
+.list img {
+    width: 100%;
+}
+
+.list .title {
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.02em;
+    margin: 32px 0 8px;
+}
+
+.list .content {
+    margin: 0 0 32px;
+}
+
+.features-list .title {
+    margin-bottom: 8px;
 }
 
 .section-title,
-.team-list .title,
-.portfolio-list .title {
+.list .title {
     text-transform: capitalize;
 }
 
 .team-list .item {
     background-color: var(--white);
+    text-align: center;
 }
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
 /* #endregion */
 
 /* #region Buttons */
